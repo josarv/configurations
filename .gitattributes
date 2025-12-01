@@ -1,0 +1,4 @@
+*.toml linguist-detectable=true
+*.json linguist-detectable=true
+dotfiles/.envrc linguist-language=Shell linguist-detectable=true
+dotfiles.bashrc linguist-language=Shell linguist-detectable=true

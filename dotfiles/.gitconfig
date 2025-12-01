@@ -1,0 +1,21 @@
+[user]
+	name = Iosif Arvanitis
+	email = 58145194+josarv@users.noreply.github.com
+	username = josarv
+	signingkey = /home/joe/.ssh/id_ed25519.pub
+[init]
+	defaultBranch = main
+[pull]
+	rebase = false
+[core]
+	editor = code
+	autocrlf = input
+[help]
+	autocorrect = 0
+[color]
+	ui = auto
+[gpg]
+	format = ssh
+[commit]
+	rebase = false
+	gpgSign = true

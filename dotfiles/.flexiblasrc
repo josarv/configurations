@@ -1,0 +1,9 @@
+default=AOCL-BLIS-LP64
+
+[AOCL-BLIS-LP64]
+library=/opt/AMD/aocl/aocl-linux-gcc-5.1.0/gcc/lib_LP64/libblis-mt.so
+comment=AMD Optimizing CPU Libraries (AOCL) LP64
+
+[AOCL-BLIS-ILP64]
+library=/opt/AMD/aocl/aocl-linux-gcc-5.1.0/gcc/lib_ILP64/libblis-mt.so
+comment=AMD Optimizing CPU Libraries (AOCL) ILP64

@@ -1,0 +1,41 @@
+{
+	"name": "Python 3",
+	"image": "mcr.microsoft.com/devcontainers/python:${templateOption:imageVariant}",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-python.python",  // installs automatically pylance, python envs, debugger
+                "ms-python.pylint",
+                "ms-python.black-formatter",
+                "ms-python.isort"
+            ],
+            "settings": {
+                "python.defaultInterpreterPath": "/usr/local/bin/python",
+                "python.analysis.typeCheckingMode": "strict",
+                "[python]": {
+                    "editor.insertSpaces": true,
+                    "editor.tabSize": 4,
+                    "editor.formatOnSave": true,
+                    "editor.defaultFormatter": "ms-python.black-formatter",
+                    "editor.codeActionsOnSave": {
+                        "source.organizeImports": "explicit"
+                    }
+                },          
+                "isort.args": ["--profile", "black"],
+                "pylint.args": [  // black handles those
+                    "--disable=C0301",        // disable line too long
+                    "--disable=C0411",        // disable wrong import order
+                    "--disable=W0311",        // disable bad indentation
+                    "--disable=C0303",        // disable trim trailing whitespace
+                    "--disable=C0114",        // disable missing module docstring
+                    "--disable=C0115",        // disable missing class docstring
+                    "--disable=C0116"         // disable missing function docstring
+                ],
+                "black-formatter.args": [
+                    "--line-length", "100"
+                ]
+            }
+        }
+    },
+    "postCreateCommand": "bash .devcontainer/install-dependencies.sh --verbose"
+}
