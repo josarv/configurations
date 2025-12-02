@@ -21,13 +21,3 @@ pipx install poetry
 ### Docker
 
 - [Official Docker Image](https://hub.docker.com/_/python)
-
-### Dev Container
-
-In the (new) python project root run:
-
-```bash
-devcontainer templates apply \
-  --template-id ~/Repositories/configurations/toolchains/python \
-  --target .
-```
